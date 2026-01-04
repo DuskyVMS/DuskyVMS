@@ -1,0 +1,19 @@
+﻿@page "/"
+@using DuskyVMS.Classes.RealTime
+@using Microsoft.VisualBasic
+
+
+<PageTitle>RTSP to Web Stream POC</PageTitle>
+
+<h1>@(DateTime.Now.ToString())</h1>
+
+<button @onclick="()=>{StateHasChanged();}">Refresh</button>
+
+
+@{
+
+    var asdf = new DuskyVMS.Classes.RealTime.RtspSession("rtsp://ba-mv-cm1/media/video1");
+    //asdf.RtpStreams[RtpStreamTypes.Video].ToString();
+
+
+}
