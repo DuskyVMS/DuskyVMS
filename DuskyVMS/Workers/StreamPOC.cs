@@ -8,7 +8,9 @@ namespace DuskyVMS.Workers
         public StreamPOC()
         {
             DuskyVMS.Logger.LogInformation("Starting stream...");
-            new RtpStream(5005, ProtocolType.Udp);
+            var connection = new RtspConnection(new("rtsp://admin:iseeyou!1@ba-mv-cm1/media/video1"));
+            connection.ConnectAsync().Wait();
+            connection.DescribeAsync();
         }
     }
 }
