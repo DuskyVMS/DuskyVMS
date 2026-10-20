@@ -8,7 +8,7 @@ namespace DuskyVMS.Workers
         public StreamPOC()
         {
             DuskyVMS.Logger.LogInformation("Starting stream...");
-            var connection = new RtspConnection(new("rtsp://admin:iseeyou!1@ba-mv-cm1/media/video1"));
+            var connection = new RtspConnection(new("rtsp://ba-mv-cm1/media/video1"));
             connection.ConnectAsync().Wait();
             connection.DescribeAsync();
         }
